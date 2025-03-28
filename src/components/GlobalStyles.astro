@@ -1,0 +1,37 @@
+---
+const foregroundColor = "rgb(221 243 228)";
+const backgroundColor = "rgb(24 121 78)";
+---
+
+<style is:global>
+  @font-face {
+    font-family: "Voga";
+    src: url("/fonts/voga.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "calibri-regular";
+    src: url("/fonts/calibri-regular.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  .text {
+    line-height: 1.4;
+    font-size: 16pt;
+    letter-spacing: 0.8px;
+    font-family: "calibri-regular";
+    text-wrap: wrap;
+    text-align: justify;
+    /* text-indent: 30px; */
+  }
+  .global-padding {
+    padding: 0 1.5rem;
+  }
+  .global-header{
+    color: black;
+    font-family: "calibri-regular";
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+import NavBar from "../components/NavBar/NavBar";
+import "../components/GlobalStyles.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <div class="nav-empty-space"></div>
+    <NavBar client:load />
+    <slot />
+  </body>
+</html>
+
+<style>
+  html {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .nav-empty-space{
+    height: 70px;
+    width: 100vw;
+  }
+</style>

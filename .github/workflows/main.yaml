@@ -1,0 +1,52 @@
+name: Deploy Astro Site to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Install dependencies and build the Astro site
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      # Step 3: Setup SSH
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Step 4: Deploy to DigitalOcean
+      - name: Deploy to DigitalOcean
+        run: |
+          # Compress the build output
+          tar -czf astro-site.tar.gz dist
+
+          # Copy the build to the server
+          scp -o StrictHostKeyChecking=no astro-site.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.DIGITALOCEAN_IP }}:/var/www/m.psicologorafaelpinho.com.br
+
+          # SSH into the server and extract the files
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.DIGITALOCEAN_IP }} << 'EOF'
+          cd /var/www/m.psicologorafaelpinho.com.br
+          shopt -s extglob
+          rm -rf !(astro-site.tar.gz)
+          tar -xzvf astro-site.tar.gz
+          rm astro-site.tar.gz
+
+          # Move files from the dist folder to the deployment directory
+          mv dist/* .
+          rm -rf dist  # Optionally remove the dist folder after moving files
+
+          systemctl reload apache2
+
+          EOF

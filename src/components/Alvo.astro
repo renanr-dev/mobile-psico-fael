@@ -1,0 +1,130 @@
+---
+import alvo from "../images/alvo.jpg";
+import alvoIcon from "../images/alvo-icone.png";
+import "./GlobalStyles.astro";
+---
+
+<div id="container-alvo" class="container global-padding">
+  <div class="container-image">
+    <img class="alvo-image" src={alvo.src} alt={"alvo"} />
+    <h2>PÚBLICO-ALVO</h2>
+  </div>
+  <div class="alvo-texto">
+    <span class="text">
+      Atendo adolescentes a partir de 13 anos e adultos de todas as idades, além
+      de realizar atendimentos afirmativos para pessoas LGBTQIAPN+. Ofereço os
+      serviços de Psicoterapia e Orientação Profissional (AEP) de forma online
+      para todo o Brasil! Meus atendimentos são calorosos e expressivos, pois
+      acredito que um trabalho humanizado e autêntico eleva a possibilidade de
+      evolução dos meus pacientes.
+    </span>
+  </div>
+
+  <div class="contato">
+    <div class="icons">
+      <a href="https://www.instagram.com/psi.rafaelpinho/" target="_blank">
+        <i class="fa fa-instagram"></i>
+        <span class="bubble">Conheça o meu Instagram</span>
+      </a>
+      <a href="https://wa.me/5511965665977" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+        <span class="bubble">Entre em contato</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  #container-alvo {
+    height: fit-content;
+    background-color: #ffe255;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .container-image{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .publico-alvo {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+  }
+
+  .alvo-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+  }
+  .alvo-texto {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .alvo-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contato {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    min-width: 250px;
+    text-align: left;
+  }
+  .bubble {
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #062440;
+    filter: drop-shadow(5px 5px 0px #062440);
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .icons > a {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    gap: 5px;
+    text-decoration: none;
+    color: #062440;
+  }
+  .icons > a > i {
+    font-size: 20px;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    color: black;
+    border-radius: 100%;
+  }
+  .icons > a > span {
+    width: 60%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .alvo-icon {
+    width: 28px;
+  }
+  .alvo-name {
+    display: flex;
+
+    gap: 20px;
+  }
+
+  .bubble:hover {
+    transform: translate(2px, 2px);
+    filter: drop-shadow(3px 3px 0 #062440);
+  }
+</style>

@@ -1,0 +1,43 @@
+.home-container {
+  box-sizing: border-box;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.home-text-header {
+  height: 80px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  color: #062440;
+  font-family: "Beatles", sans-serif;
+}
+.home-text-title {
+  border-bottom: #062440 1px solid;
+}
+.text-header-image {
+  width: 80px;
+  height: 100%;
+}
+
+.text-section {
+  font-size: 16pt;
+  letter-spacing: 2px;
+}
+.image-header {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+.image-body {
+  width: 100%;
+  object-fit: cover;
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,37 @@
+---
+import TextImagePage from "../components/TextImagePage/TextImagePage";
+import Layout from "../layouts/Layout.astro";
+import imgTest from "../images/aten-lgbt.jpg";
+import imgLarge from "../images/image-full.png";
+import HomePage from "../components/HomePage/HomePage";
+import Alvo from "../components/Alvo.astro";
+
+let text =
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+---
+
+<Layout>
+  <div class="marginF">
+    <HomePage client:load />
+    <Alvo />
+    <TextImagePage
+      title="asdasdasd asdasdasd"
+      text={text}
+      imgHeaderSrc={imgTest.src}
+      imgBodySrc={imgLarge.src}
+      client:load
+    />
+    <TextImagePage
+      title="ghj ghjghjghjghj"
+      text={text}
+      imgHeaderSrc={imgTest.src}
+      imgBodySrc={imgTest.src}
+      client:load
+    />
+  </div>
+</Layout>
+<style>
+  .margin {
+    padding: 0 1rem;
+  }
+</style>
