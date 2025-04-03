@@ -17,8 +17,8 @@ function HomePage() {
 
   return (
     <div className="home-container">
-      <div className="image-container">
-        <img src={imgIntro.src} className="image-body" />
+      <div className="home-image-container">
+        <img src={imgIntro.src} className="home-image-body" />
       </div>
       <div className="text-container">
         <div className="home-text-header">

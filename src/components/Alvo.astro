@@ -7,7 +7,7 @@ import "./GlobalStyles.astro";
 <div id="container-alvo" class="container global-padding">
   <div class="container-image">
     <img class="alvo-image" src={alvo.src} alt={"alvo"} />
-    <h2>PÚBLICO-ALVO</h2>
+    <div class="alvo-text-title">PÚBLICO-ALVO</div>
   </div>
   <div class="alvo-texto">
     <span class="text">
@@ -46,7 +46,7 @@ import "./GlobalStyles.astro";
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
   }
   .publico-alvo {
     display: flex;
@@ -120,8 +120,13 @@ import "./GlobalStyles.astro";
   .alvo-name {
     display: flex;
 
-    gap: 20px;
+    gap: 10px;
   }
+  .alvo-text-title {
+  font-family: "calibri-regular";
+  font-size: 18pt;
+  font-weight: bold;
+}
 
   .bubble:hover {
     transform: translate(2px, 2px);

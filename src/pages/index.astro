@@ -2,12 +2,29 @@
 import TextImagePage from "../components/TextImagePage/TextImagePage";
 import Layout from "../layouts/Layout.astro";
 import imgTest from "../images/aten-lgbt.jpg";
-import imgLarge from "../images/image-full.png";
 import HomePage from "../components/HomePage/HomePage";
 import Alvo from "../components/Alvo.astro";
+import Rodape from "../components/Rodape.astro";
+import imgPsicoterapia from "../images/piscoterapia.jpg";
+import imgBodyPsicoterapia from "../images/image-full.png";
+import imgOrientacao from "../images/orientacao.jpg";
+import imgBodyOrientacao from "../images/servico-chart.jpg";
+import imgAtendimento from "../images/aten-lgbt.jpg";
+import imgBodyAtendimento from "../images/servico-street.jpg";
 
-let text =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+import imgEu from "../images/eu.jpg";
+import imgBodyEu from "../images/eu-content.jpg";
+
+let textPsicoterapia =
+  "A psicoterapia é um processo íntimo no qual as suas demandas são tratadas através da escuta, da aceitação, da compreensão, do diálogo e da elaboração de estratégias para promoção de saúde, bem-estar e autorrealização,estando as minhas práticas amparadas na ciência da Psicologia. Meus atendimentos são orientados pela Abordagem Centrada na Pessoa (ACP), uma teoria que valoriza profundamente a individualidade da experiência de cada pessoa. Cada encontro possui duração média de 50min, ocorre por chamada de vídeo e consiste em um espaço seguro e sigiloso para que você possa se expressar livremente. Eu busco construir uma relação profunda e verdadeira com você, utilizando meus conhecimentos, vivências e técnicas para te ajudar a lidar com suas questões de natureza psicológica. A psicoterapia depende da sua abertura ao processo para que tenha resultados e não é possível prever quantas sessões serão necessárias para o tratamento adequado de cada demanda, mas você é livre para interromper ou pausar seu processo psicoterapêutico quando quiser – em conformidade com as condições do contrato estabelecido.";
+let textOrientacao =
+  "Se você está em dúvida sobre qual curso fazer depois do Ensino Médio, se está indecisa/o entre permanecer no seu emprego e buscar algo novo ou se você é aposentada/o e não sabe qual caminho seguir... o processo de Análise da Escolha Profissional (AEP) pode ser uma forma de decidir. A AEP é comumente chamada de Orientação Profissional e consiste no processo no qual a pessoa reflete sobre sua vida profissional através de encontros psicoterapêuticos que possibilitam o acesso ao autoconhecimento para a realização de escolhas genuínas. O objetivo da AEP não é simplesmente dar uma resposta fechada ao final do processo, mas sim expandir o seu horizonte de possibilidades para que você possa, em sua liberdade, realizar a escolha que mais fizer sentido para você - ou até mesmo optar por não escolher. Ao longo de encontros de duração média de 50min que acontecem semanalmente por chamadas de vídeo, você mergulhará em si mesma/o através de atividades de autoconhecimento, reflexões e discussões guiadas por mim. Esses encontros têm o propósito de compreender os contextos históricos, sociais, culturais e econômicos que te conduziram até o momento presente; desconstruir ideias e valores engessados e limitantes para que você possa vislumbrar novas possibilidades; e, enfim, permitir que você utilize de sua nova perspectiva.";
+
+let textAtendimento =
+  'Historicamente falando, pessoas LGBTQIAPN+ sofreram e ainda sofrem muitas violências decorrentes do preconceito existente na sociedade devido aos estigmas da heteronormatividade e da cisnormatividade. A Psicologia, como uma ciência relativamente jovem, também foi afetada por tais estigmas e, como consequência disso, muitas grades curriculares ainda não abordam profundamente as questões específicas das pessoas LGBTQIAPN+. Desde a década de 90, a homossexualidade passou a não ser mais considerada uma doença conforme uma declaração oficial da Organização Mundial de Saúde (OMS). Em 1999, o Conselho Federal de Psicologia (CFP) proibiu que psicólogos oferecessem a terapia de reorientação sexual ou quaisquer serviços psicológicos voltados ao tratamento da homossexualidade. Ainda assim, em 2016, o projeto de lei n.º 4931 foi apresentado na tentativa de garantir a prática da "cura gay" por psicólogos. A parte mais triste é que um grupo considerável de profissionais da Psicologia apoiou esse PL. Felizmente, o projeto foi arquivado em 2020 devido a sua proposta ser inconstitucional e retrógrada. Tudo isso mostra o quanto nossa categoria profissional ainda carece de conhecimento para o atendimento do público LGBTQIAPN+. E, dado o risco de ainda haver profissionais que reforçam os estigmas e a LGBTfobia em suas práticas, é muito importante que psicólogos busquem pelo aperfeiçoamento de seus atendimentos para oferecer um serviço de qualidade aos LGBTs e “levantem a bandeira” para mostrarem-se aliados a essa luta e garantirem que podem oferecer um espaço de segurança e acolhimento a essas pessoas. É isso o que significa oferecer atendimentos afirmativos para o público LGBTQIAPN+. Eu sou gay, orgulhoso e militante na luta por saúde, direitos e qualidade da vida LGBTQIAPN+, buscando combater em minha atuação os estigmas e preconceitos atrelados a essa população.';
+
+let textEu =
+  "Nasci em São José dos Campos, cidade onde vivi grande parte da minha vida, mas hoje moro em Mogi das Cruzes, um canto aconchegante no interior de São Paulo. Sou graduado em Psicologia pela Universidade de Mogi das Cruzes (UMC) e já me formei com uma experiência de 2 anos de estágios práticos em áreas como Psicologia Escolar, Clínica, Organizacional, Jurídica, Social/Comunitária, da Saúde, Orientação Profissional e Atendimento a Pessoas com Deficiência. Em meu TCC, pesquisei as articulações científicas sobre interseccionalidade e expressões de afeto da pessoa preta LGBTQIAPN+ com base na noção de cuidado de Martin Heidegger. Hoje, sou um psicólogo clínico humanista-fenomenológico apaixonado pelo meu trabalho. Pratico minha profissão com muita ética, responsabilidade e cuidado. Estudo com frequência e pretendo me especializar em breve. Já fui convidado para dar aulas de Psicologia Humanista-Fenomenológica em universidades como a UMC e a UniPiaget, experiências incríveis que só alimentaram minha vontade de aprender e ensinar. Digo com tranquilidade que a Psicologia trouxe sentido para a minha vida e que estou apenas começando!";
 ---
 
 <Layout>
@@ -15,19 +32,38 @@ let text =
     <HomePage client:load />
     <Alvo />
     <TextImagePage
-      title="asdasdasd asdasdasd"
-      text={text}
-      imgHeaderSrc={imgTest.src}
-      imgBodySrc={imgLarge.src}
+      title="PSICOTERAPIA"
+      text={textPsicoterapia}
+      imgHeaderSrc={imgPsicoterapia.src}
+      imgBodySrc={imgBodyPsicoterapia.src}
+      bgColor="#8CB9E1"
       client:load
     />
     <TextImagePage
-      title="ghj ghjghjghjghj"
-      text={text}
-      imgHeaderSrc={imgTest.src}
-      imgBodySrc={imgTest.src}
+      title="ORIENTAÇÃO PROFISSIONAL"
+      text={textOrientacao}
+      imgHeaderSrc={imgOrientacao.src}
+      imgBodySrc={imgBodyOrientacao.src}
+      bgColor="#FFFFFF"
       client:load
     />
+    <TextImagePage
+      title="ATENDIMENTO LGBTQIAPN+"
+      text={textAtendimento}
+      imgHeaderSrc={imgAtendimento.src}
+      imgBodySrc={imgBodyAtendimento.src}
+      bgColor="#8CB9E1"
+      client:load
+    />
+    <TextImagePage
+      title="QUEM SOU EU?"
+      text={textEu}
+      imgHeaderSrc={imgEu.src}
+      imgBodySrc={imgBodyEu.src}
+      bgColor="#FFFFFF"
+      client:load
+    />
+    <Rodape/>
   </div>
 </Layout>
 <style>

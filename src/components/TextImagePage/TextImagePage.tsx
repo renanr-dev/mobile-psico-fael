@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./TextImagePage.css";
+import "../GlobalStyles.astro"
 
 interface TextImagePageProp {
   title: string;
   text: string;
   imgHeaderSrc: string;
   imgBodySrc: string;
+  bgColor: string;
 }
 
 function TextImagePage({
@@ -13,6 +15,7 @@ function TextImagePage({
   text,
   imgHeaderSrc,
   imgBodySrc,
+  bgColor,
 }: TextImagePageProp) {
   const [isExpanded, setIsExpanded] = useState(false);
   let amountOfWords = 70;
@@ -23,12 +26,17 @@ function TextImagePage({
     : text;
   const endText = splittedText.slice(amountOfWords - 1).join(" ");
 
+  const handleShareClick = () => {
+    const textToShare = encodeURIComponent("");
+    const whatsappUrl = `https://wa.me/5511965665977?text=${textToShare}`;
+    window.open(whatsappUrl, "_blank");
+  };
   return (
-    <div className="container">
+    <div className="container" style={{ backgroundColor: bgColor }}>
       <div className="text-container">
-        <div className="text-header global-padding">
+        <div className="text-header global-padding global-header">
           <div className="text-header-image">
-            <img src={imgHeaderSrc} alt="" className="image-header"/>
+            <img src={imgHeaderSrc} alt="" className="image-header" />
           </div>
           <div className="text-title">{title}</div>
         </div>
@@ -49,7 +57,12 @@ function TextImagePage({
         </div>
       </div>
       <div className="image-container">
-        <img src={imgBodySrc} alt=""  className="image-body"/>
+        <img src={imgBodySrc} alt="" className="image-body" />
+      </div>
+      <div className="center-contact">
+        <button className="call-contato " onClick={handleShareClick}>
+          Tire suas dúvidas ou agende o seu contato inicial gratuito!
+        </button>
       </div>
     </div>
   );
