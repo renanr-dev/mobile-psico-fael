@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./HomePage.css";
 import imgIntro from "../../images/intro.jpg";
-import "../GlobalStyles.astro"
+import "../GlobalStyles.astro";
 
 function HomePage() {
   let text =
@@ -29,12 +29,11 @@ function HomePage() {
           {itCanOverflow && (
             <>
               {!isExpanded && <span>... </span>}
-              <span className={`${!isExpanded && "hidden"}`}>{endText}</span>
-              <span
-                className="text"
-                onClick={() => setIsExpanded(!isExpanded)}
-              >
-                <b>{isExpanded ? "Ler menos" : "Ler mais"}</b>
+              <span className={`${!isExpanded && "hidden"}`}>
+                {" " + endText}
+              </span>
+              <span className="text" onClick={() => setIsExpanded(!isExpanded)}>
+                <b>{isExpanded ? " Ler menos" : " Ler mais"}</b>
               </span>
             </>
           )}

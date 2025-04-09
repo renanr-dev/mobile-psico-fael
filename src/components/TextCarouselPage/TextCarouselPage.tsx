@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TextCarouselPage.css";
-import "../GlobalStyles.astro"
+import "../GlobalStyles.astro";
 import PhotoCarousel from "../PhotoCarousel/PhotoCarousel";
 
 interface TextImagePageProp {
@@ -9,7 +9,7 @@ interface TextImagePageProp {
   imgHeaderSrc: string;
   imgBodySrc: string;
   bgColor: string;
-  pageId:string
+  pageId: string;
 }
 
 function TextCarouselPage({
@@ -18,7 +18,7 @@ function TextCarouselPage({
   imgHeaderSrc,
   imgBodySrc,
   bgColor,
-  pageId
+  pageId,
 }: TextImagePageProp) {
   const [isExpanded, setIsExpanded] = useState(false);
   let amountOfWords = 70;
@@ -48,7 +48,9 @@ function TextCarouselPage({
           {itCanOverflow && (
             <>
               {!isExpanded && <span>... </span>}
-              <span className={`${!isExpanded && "hidden"}`}>{endText}</span>
+              <span className={`${!isExpanded && "hidden"}`}>
+                {" " + endText}
+              </span>
               <span
                 className="text-violet-400 ml-2"
                 onClick={() => setIsExpanded(!isExpanded)}
