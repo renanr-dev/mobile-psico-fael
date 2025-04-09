@@ -45,6 +45,11 @@
   transform: translateX(0);
 }
 
-.list-menu > li {
+.list-menu > a {
   padding: 10px;
+  width: 100%;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-family: "calibri-regular";
 }

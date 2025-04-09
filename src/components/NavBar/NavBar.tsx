@@ -18,10 +18,10 @@ export default function NavBar() {
       </span>
       <div className={`side-panel-container ${sideOpen ? "visible" : ""}`}>
         <ul className="list-menu">
-          <li>PSICOTERAPIA</li>
-          <li>ORIENTAÇÃO PROFISSIONAL</li>
-          <li>ATENDIMENTOS LGBTQIAPN+ </li>
-          <li>SOBRE MIM</li>
+          <a href="#psicoterapia">PSICOTERAPIA</a>
+          <a href="#orientacao">ORIENTAÇÃO PROFISSIONAL</a>
+          <a href="#atendimento">ATENDIMENTOS LGBTQIAPN+ </a>
+          <a href="#sobre-mim">SOBRE MIM</a>
         </ul>
       </div>
     </div>

@@ -8,6 +8,7 @@ interface TextImagePageProp {
   imgHeaderSrc: string;
   imgBodySrc: string;
   bgColor: string;
+  pageId:string
 }
 
 function TextImagePage({
@@ -16,6 +17,7 @@ function TextImagePage({
   imgHeaderSrc,
   imgBodySrc,
   bgColor,
+  pageId
 }: TextImagePageProp) {
   const [isExpanded, setIsExpanded] = useState(false);
   let amountOfWords = 70;
@@ -32,7 +34,7 @@ function TextImagePage({
     window.open(whatsappUrl, "_blank");
   };
   return (
-    <div className="container" style={{ backgroundColor: bgColor }}>
+    <div className="container" id={pageId} style={{ backgroundColor: bgColor }}>
       <div className="text-container">
         <div className="text-header global-padding global-header">
           <div className="text-header-image">
