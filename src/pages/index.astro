@@ -1,5 +1,6 @@
 ---
 import TextImagePage from "../components/TextImagePage/TextImagePage";
+import TextCarouselPage from "../components/TextCarouselPage/TextCarouselPage";
 import Layout from "../layouts/Layout.astro";
 import imgTest from "../images/aten-lgbt.jpg";
 import HomePage from "../components/HomePage/HomePage";
@@ -14,6 +15,7 @@ import imgBodyAtendimento from "../images/servico-street.jpg";
 
 import imgEu from "../images/eu.jpg";
 import imgBodyEu from "../images/eu-content.jpg";
+import Feedback from "../components/Feedback/Feedback";
 
 let textPsicoterapia =
   "A psicoterapia é um processo íntimo no qual as suas demandas são tratadas através da escuta, da aceitação, da compreensão, do diálogo e da elaboração de estratégias para promoção de saúde, bem-estar e autorrealização,estando as minhas práticas amparadas na ciência da Psicologia. Meus atendimentos são orientados pela Abordagem Centrada na Pessoa (ACP), uma teoria que valoriza profundamente a individualidade da experiência de cada pessoa. Cada encontro possui duração média de 50min, ocorre por chamada de vídeo e consiste em um espaço seguro e sigiloso para que você possa se expressar livremente. Eu busco construir uma relação profunda e verdadeira com você, utilizando meus conhecimentos, vivências e técnicas para te ajudar a lidar com suas questões de natureza psicológica. A psicoterapia depende da sua abertura ao processo para que tenha resultados e não é possível prever quantas sessões serão necessárias para o tratamento adequado de cada demanda, mas você é livre para interromper ou pausar seu processo psicoterapêutico quando quiser – em conformidade com as condições do contrato estabelecido.";
@@ -31,6 +33,7 @@ let textEu =
   <div class="marginF">
     <HomePage client:load />
     <Alvo />
+    <Feedback client:load />
     <TextImagePage
       title="PSICOTERAPIA"
       text={textPsicoterapia}
@@ -55,7 +58,7 @@ let textEu =
       bgColor="#8CB9E1"
       client:load
     />
-    <TextImagePage
+    <TextCarouselPage
       title="QUEM SOU EU?"
       text={textEu}
       imgHeaderSrc={imgEu.src}
@@ -63,7 +66,7 @@ let textEu =
       bgColor="#FFFFFF"
       client:load
     />
-    <Rodape/>
+    <Rodape />
   </div>
 </Layout>
 <style>

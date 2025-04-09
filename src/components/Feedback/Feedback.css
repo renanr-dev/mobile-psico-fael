@@ -1,0 +1,40 @@
+.feedback-message {
+  font-family: "calibri-regular";
+  font-weight: bold;
+  display: flex;
+  text-wrap: wrap;
+  font-style: italic;
+  justify-content: center;
+  align-items: center;
+  color: rgb(44, 44, 44);
+  height: max-content;
+  width: 90%;
+  font-style: italic;
+  border-radius: 30px;
+  padding: 15px;
+  text-align: justify;
+
+  font-size: 18px;
+    min-height: 100px;
+}
+.feedback-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  align-items: center;
+  gap: 50px;
+}
+.feedback-row > div:nth-child(1) {
+  background-color: #8cb9e1;
+}
+
+.feedback-row > div:nth-child(2) {
+  background-color: #ffe255;
+}
+
+.header-title{
+  font-family: "calibri-regular";
+  font-size: 18pt;
+  padding: 0 1.5rem;
+}
