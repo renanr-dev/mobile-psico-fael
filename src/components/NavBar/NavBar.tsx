@@ -5,6 +5,14 @@ import logo from "../../images/logo1.png";
 export default function NavBar() {
   const [sideOpen, setSideOpen] = useState(false);
 
+  const scrollToSection = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="navbar">
       <img src={logo.src} alt="" />
@@ -18,10 +26,27 @@ export default function NavBar() {
       </span>
       <div className={`side-panel-container ${sideOpen ? "visible" : ""}`}>
         <ul className="list-menu">
-          <a href="#psicoterapia">PSICOTERAPIA</a>
-          <a href="#orientacao">ORIENTAÇÃO PROFISSIONAL</a>
-          <a href="#atendimento">ATENDIMENTOS LGBTQIAPN+ </a>
-          <a href="#sobre-mim">SOBRE MIM</a>
+          <a
+            onClick={(e) => scrollToSection(e, "psicoterapia")}
+            href="#psicoterapia"
+          >
+            PSICOTERAPIA
+          </a>
+          <a
+            onClick={(e) => scrollToSection(e, "orientacao")}
+            href="#orientacao"
+          >
+            ORIENTAÇÃO PROFISSIONAL
+          </a>
+          <a
+            onClick={(e) => scrollToSection(e, "atendimento")}
+            href="#atendimento"
+          >
+            ATENDIMENTOS LGBTQIAPN+{" "}
+          </a>
+          <a onClick={(e) => scrollToSection(e, "sobre-mim")} href="#sobre-mim">
+            SOBRE MIM
+          </a>
         </ul>
       </div>
     </div>

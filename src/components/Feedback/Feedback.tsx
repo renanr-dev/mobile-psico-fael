@@ -38,8 +38,7 @@ function Feedback() {
         }}
         className="header-title"
       >
-        100% DAS PESSOAS ATENDIDAS AFIRMARAM ESTAREM SATISFEITAS COM OS SERVIÇOS
-        PRESTADOS!
+        Confira o que alguns clientes tem a dizer sobre os meus serviços:
       </h2>
       <Swiper
         style={{ height: "auto", width: "90%" }}
