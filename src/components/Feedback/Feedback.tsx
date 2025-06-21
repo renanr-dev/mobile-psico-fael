@@ -19,6 +19,7 @@ function Feedback() {
     "Um profissional excelente, empático, que me inspira como profissional e além disso me faz me sentir ótima nas sessões.",
     "É uma experiência muito boa, me sinto muito ouvido e gosto da forma que ele faz as perguntas certas para que eu mesmo chegue a uma conclusão sobre.",
     "Um profissional que com apenas 26 anos me surpreendeu. Temos uma troca muito boa, produtiva. Dias de ouvir, dias de falar, sorrir chorar. Pra mim mais do que um profissional, uma pessoa que esta se tornando um amigo.",
+    "[...] capacidade de empatia, a capacidade de identificar o subjetivo e desenvolver intervenções aplicáveis, além de todo o arcabouço cultural, técnico e científico.",
   ];
 
   const listaEmPares: string[][] = [];
