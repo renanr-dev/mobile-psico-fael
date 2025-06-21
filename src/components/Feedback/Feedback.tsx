@@ -37,7 +37,7 @@ function Feedback() {
           marginBottom: "30px",
           textAlign: "center",
         }}
-        className="header-title"
+        className="header-title voga-font-header-2"
       >
         Confira o que alguns clientes tem a dizer sobre os meus serviços:
       </h2>
