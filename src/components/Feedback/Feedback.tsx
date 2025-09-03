@@ -20,6 +20,7 @@ function Feedback() {
     "É uma experiência muito boa, me sinto muito ouvido e gosto da forma que ele faz as perguntas certas para que eu mesmo chegue a uma conclusão sobre.",
     "Um profissional que com apenas 26 anos me surpreendeu. Temos uma troca muito boa, produtiva. Dias de ouvir, dias de falar, sorrir chorar. Pra mim mais do que um profissional, uma pessoa que esta se tornando um amigo.",
     "[...] capacidade de empatia, a capacidade de identificar o subjetivo e desenvolver intervenções aplicáveis, além de todo o arcabouço cultural, técnico e científico.",
+    "Percebo que melhorei muito desde que iniciei esse processo, não apenas nos meus sentimentos do dia a dia, mas também na forma como enxergo a mim mesma. Cada encontro me ajuda a me conhecer melhor, a entender minhas emoções e a encontrar caminhos mais saudáveis para lidar com os desafios",
   ];
 
   const listaEmPares: string[][] = [];
