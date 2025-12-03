@@ -2,20 +2,19 @@
 import TextImagePage from "../components/TextImagePage/TextImagePage";
 import TextCarouselPage from "../components/TextCarouselPage/TextCarouselPage";
 import Layout from "../layouts/Layout.astro";
-import imgTest from "../images/aten-lgbt.jpg";
+import imgBook from "../images/book2.png";
+import imgBookIcon from "../images/book-icon.jpg";
 import HomePage from "../components/HomePage/HomePage";
 import Alvo from "../components/Alvo.astro";
 import Rodape from "../components/Rodape.astro";
-import imgPsicoterapia from "../images/piscoterapia.jpg";
+import imgPsicoterapia from "../images/piscoterapia.jpeg";
 import imgBodyPsicoterapia from "../images/image-full.png";
 import imgOrientacao from "../images/orientacao.jpg";
 import imgBodyOrientacao from "../images/servico-chart.jpg";
 import imgAtendimento from "../images/aten-lgbt.jpg";
 import imgBodyAtendimento from "../images/servico-street.jpg";
-
 import imgTcc from "../images/tcc.png";
 import imgTccIcon from "../images/tcc-icon.jpg";
-
 import imgEu from "../images/eu.jpg";
 import imgBodyEu from "../images/eu-content.jpg";
 import Feedback from "../components/Feedback/Feedback";
@@ -25,7 +24,7 @@ import TccImagePage from "../components/TccImagePage/TccImagePage";
 let textPsicoterapia =
   "A psicoterapia é um processo íntimo no qual as suas demandas são tratadas através da escuta, da aceitação, da compreensão, do diálogo e da elaboração de estratégias para promoção de saúde, bem-estar e autorrealização, estando as minhas práticas amparadas na ciência da Psicologia. Meus atendimentos são orientados pela Abordagem Centrada na Pessoa (ACP), uma teoria que valoriza profundamente a individualidade da experiência de cada pessoa. Cada encontro possui duração média de 50min, ocorre por chamada de vídeo e consiste em um espaço seguro e sigiloso para que você possa se expressar livremente. Eu busco construir uma relação profunda e verdadeira com você, utilizando meus conhecimentos, vivências e técnicas para te ajudar a lidar com suas questões de natureza psicológica. A psicoterapia depende da sua abertura ao processo para que tenha resultados e não é possível prever quantas sessões serão necessárias para o tratamento adequado de cada demanda, mas você é livre para interromper ou pausar seu processo psicoterapêutico quando quiser – em conformidade com as condições do contrato estabelecido.";
 
-  let textOrientacao =
+let textOrientacao =
   "Se você está em dúvida sobre qual curso fazer depois do Ensino Médio, se está indecisa/o entre permanecer no seu emprego e buscar algo novo ou se você é aposentada/o e não sabe qual caminho seguir... o processo de Análise da Escolha Profissional (AEP) pode ser uma forma de decidir. A AEP é comumente chamada de Orientação Profissional e consiste no processo no qual a pessoa reflete sobre sua vida profissional através de encontros psicoterapêuticos que possibilitam o acesso ao autoconhecimento para a realização de escolhas genuínas. O objetivo da AEP não é simplesmente dar uma resposta fechada ao final do processo, mas sim expandir o seu horizonte de possibilidades para que você possa, em sua liberdade, realizar a escolha que mais fizer sentido para você - ou até mesmo optar por não escolher. Ao longo de encontros de duração média de 50min que acontecem semanalmente por chamadas de vídeo, você mergulhará em si mesma/o através de atividades de autoconhecimento, reflexões e discussões guiadas por mim. Esses encontros têm o propósito de compreender os contextos históricos, sociais, culturais e econômicos que te conduziram até o momento presente; desconstruir ideias e valores engessados e limitantes para que você possa vislumbrar novas possibilidades; e, enfim, permitir que você utilize de sua nova perspectiva para realizar novas escolhas. A AEP tem uma duração estimada de 8 a 10 sessões, podendo variar conforme o caso.";
 
 let textAtendimento =
@@ -36,11 +35,25 @@ let textTcc =
 
 let textEu =
   "Nasci em São José dos Campos, cidade onde vivi grande parte da minha vida, mas hoje moro em Mogi das Cruzes, um canto aconchegante no interior de São Paulo. Sou graduado em Psicologia pela Universidade de Mogi das Cruzes (UMC) e já me formei com uma experiência de 2 anos de estágios práticos em áreas como Psicologia Escolar, Clínica, Organizacional, Jurídica, Social/Comunitária, da Saúde, Orientação Profissional e Atendimento a Pessoas com Deficiência. Ao lado de uma grande amiga, contribui para a realização do nosso TCC, no qual foi feita uma importante pesquisa a respeito das articulações científicas sobre interseccionalidade e expressões de afeto da pessoa preta LGBTQIAPN+ com base na noção de cuidado de Martin Heidegger. Hoje, sou um psicólogo clínico humanista-fenomenológico apaixonado pelo meu trabalho. Pratico minha profissão com muita ética, responsabilidade e cuidado. Estudo com frequência e estou me especializando em Práticas Clínicas Fenomenológico-Existenciais pela FAPSI. Já fui convidado para dar aulas de Psicologia Humanista-Fenomenológica em universidades como a UMC e a UniPiaget, experiências incríveis que só alimentaram minha vontade de aprender e ensinar. Digo com tranquilidade que a Psicologia trouxe sentido para a minha vida e que estou apenas começando!";
+
+let textBook =
+  'O livro "Coisas que acontecem no banheiro" é uma ideia que venho carregando comigo há anos, como a silhueta indefinida de um objeto colocado gentilmente em um canto silencioso de mim. Eu nunca me sentei, respirei fundo e tomei a decisão de escrevê-lo. Assim como as coisas que acontecem no banheiro, esse livro só aconteceu. Ele é composto por textos que escrevi para me compreender e tornar palpáveis as coisas que eu sentia. Tirar minha mente de dentro de mim e olhar para ela. O resultado disso é uma coletânea de textos reflexivos, poesias, críticas ao mundo que nos cerca e devaneios sobre amor, paixão, relacionamentos, psiquismo, sociedade, perdão, existência, liberdade e sentido da vida. Desejo que através da minha experiência e do meu olhar sobre a realidade, você encontre conforto, significado e uma boa companhia. Que esse livro seja um espaço de acolhimento e afeto para suas emoções repousarem seguras junto às minhas.';
 ---
 
 <Layout>
   <div class="marginF">
     <HomePage client:load />
+    <TextImagePage
+      title="CONHEÇA MEU PRIMEIRO LIVRO!"
+      text={textBook}
+      imgHeaderSrc={imgBookIcon.src}
+      imgBodySrc={imgBook.src}
+      bgColor="#8CB9E1"
+      pageId="book"
+      buttonLink="https://rafaelpinho.herospark.co/coisas-que-acontecem-no-banheiro-livro-digital"
+      buttonTitle="Clique aqui e adquira a sua cópia digital! 🚽"
+      client:load
+    />
     <Alvo />
     <Feedback client:load />
     <TextImagePage
@@ -50,6 +63,8 @@ let textEu =
       imgBodySrc={imgBodyPsicoterapia.src}
       bgColor="#8CB9E1"
       pageId="psicoterapia"
+      buttonLink="https://wa.me/5511965665977"
+      buttonTitle="Tire suas dúvidas ou agende o seu contato inicial gratuito!"
       client:load
     />
     <EspacoPsico />
@@ -60,6 +75,8 @@ let textEu =
       imgBodySrc={imgBodyOrientacao.src}
       bgColor="#FFFFFF"
       pageId="orientacao"
+      buttonLink="https://wa.me/5511965665977"
+      buttonTitle="Tire suas dúvidas ou agende o seu contato inicial gratuito!"
       client:load
     />
     <TextImagePage
@@ -69,6 +86,8 @@ let textEu =
       imgBodySrc={imgBodyAtendimento.src}
       bgColor="#8CB9E1"
       pageId="atendimento"
+      buttonLink="https://wa.me/5511965665977"
+      buttonTitle="Tire suas dúvidas ou agende o seu contato inicial gratuito!"
       client:load
     />
 

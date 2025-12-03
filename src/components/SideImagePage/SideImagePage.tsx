@@ -1,28 +1,24 @@
 import React, { useState } from "react";
-import "./TextImagePage.css";
+import "./SideImagePage.css";
 import "../GlobalStyles.astro";
 
-interface TextImagePageProp {
+interface SideImagePageProp {
   title: string;
   text: string;
   imgHeaderSrc: string;
   imgBodySrc: string;
   bgColor: string;
   pageId: string;
-  buttonTitle: string;
-  buttonLink: string;
 }
 
-function TextImagePage({
+function SideImagePage({
   title,
   text,
   imgHeaderSrc,
   imgBodySrc,
   bgColor,
   pageId,
-  buttonTitle,
-  buttonLink,
-}: TextImagePageProp) {
+}: SideImagePageProp) {
   const [isExpanded, setIsExpanded] = useState(false);
   let amountOfWords = 70;
   const splittedText = text.split(" ");
@@ -33,9 +29,10 @@ function TextImagePage({
   const endText = splittedText.slice(amountOfWords - 1).join(" ");
 
   const handleShareClick = () => {
-    window.open(buttonLink, "_blank");
+    const textToShare = encodeURIComponent("");
+    const whatsappUrl = `https://wa.me/5511965665977?text=${textToShare}`;
+    window.open(whatsappUrl, "_blank");
   };
-
   return (
     <div className="container" id={pageId} style={{ backgroundColor: bgColor }}>
       <div className="text-container">
@@ -68,11 +65,11 @@ function TextImagePage({
       </div>
       <div className="center-contact">
         <button className="call-contato " onClick={handleShareClick}>
-          {buttonTitle}
+          Tire suas dúvidas ou agende o seu contato inicial gratuito!
         </button>
       </div>
     </div>
   );
 }
 
-export default TextImagePage;
+export default SideImagePage;

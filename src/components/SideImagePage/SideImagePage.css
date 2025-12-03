@@ -61,12 +61,10 @@
   text-indent: 0;
   font-weight: bold;
   font-style: italic;
-  width: 100%;
 }
 
 .center-contact {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-  padding: 0 16px;
 }

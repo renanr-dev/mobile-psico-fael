@@ -42,10 +42,13 @@ export default function NavBar() {
             onClick={(e) => scrollToSection(e, "atendimento")}
             href="#atendimento"
           >
-            ATENDIMENTOS LGBTQIAPN+{" "}
+            ATENDIMENTOS LGBTQIAPN+
           </a>
           <a onClick={(e) => scrollToSection(e, "sobre-mim")} href="#sobre-mim">
             SOBRE MIM
+          </a>
+          <a onClick={(e) => scrollToSection(e, "book")} href="#book">
+            ADQUIRA MEU LIVRO!
           </a>
         </ul>
       </div>

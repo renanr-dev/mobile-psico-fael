@@ -7,6 +7,9 @@ import eu_content_2 from "../../images/eu-content-2.jpg";
 import eu_content_3 from "../../images/3.jpg";
 import eu_content_4 from "../../images/eu-content-4.jpg";
 import eu_content_5 from "../../images/5.jpg";
+import eu_content_6 from "../../images/6.jpg";
+import eu_content_7 from "../../images/7.jpg";
+import eu_content_8 from "../../images/8.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -60,6 +63,27 @@ function PhotoCarousel() {
           <img
             className="image-carousel"
             src={eu_content_5.src}
+            alt={"eu-content"}
+          />
+        </SwiperSlide>
+         <SwiperSlide>
+          <img
+            className="image-carousel"
+            src={eu_content_6.src}
+            alt={"eu-content"}
+          />
+        </SwiperSlide>
+         <SwiperSlide>
+          <img
+            className="image-carousel"
+            src={eu_content_7.src}
+            alt={"eu-content"}
+          />
+        </SwiperSlide>
+         <SwiperSlide>
+          <img
+            className="image-carousel"
+            src={eu_content_8.src}
             alt={"eu-content"}
           />
         </SwiperSlide>
