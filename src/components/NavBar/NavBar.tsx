@@ -48,7 +48,7 @@ export default function NavBar() {
             SOBRE MIM
           </a>
           <a onClick={(e) => scrollToSection(e, "book")} href="#book">
-            ADQUIRA MEU LIVRO!
+            CONHEÇA MEU LIVRO!
           </a>
         </ul>
       </div>
