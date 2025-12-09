@@ -32,6 +32,21 @@ function TextImagePage({
     : text;
   const endText = splittedText.slice(amountOfWords - 1).join(" ");
 
+  // Helper function to render text with line breaks for \n characters
+  const renderTextWithBreaks = (str: string) => {
+    return str.split("\n").map((line, idx) => (
+      <React.Fragment key={idx}>
+        {line}
+        {idx < str.split("\n").length - 1 && (
+          <>
+            <br />
+            <br />
+          </>
+        )}
+      </React.Fragment>
+    ));
+  };
+
   const handleShareClick = () => {
     window.open(buttonLink, "_blank");
   };
@@ -46,12 +61,13 @@ function TextImagePage({
           <div className="text-title">{title}</div>
         </div>
         <div className="text-section text global-padding">
-          {beginText}
+          {renderTextWithBreaks(beginText)}
           {itCanOverflow && (
             <>
               {!isExpanded && <span>... </span>}
               <span className={`${!isExpanded && "hidden"}`}>
-                {" " + endText}
+                <br />
+                {renderTextWithBreaks(endText)}
               </span>
               <span
                 className="text-violet-400 ml-2"
