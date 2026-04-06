@@ -4,12 +4,13 @@ import "../components/GlobalStyles.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <script>
-      // if (screen.width >= 700) {
-      //   location.replace("https://psicologorafaelpinho.com.br/");
-      // }
+      const isPhone = /Android|iPhone|iPad|iPod|Mobile|Windows Phone|Opera Mini/i.test(navigator.userAgent);
+      if (!isPhone) {
+        location.replace("https://psicologorafaelpinho.com.br/");
+      }
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -19,7 +20,38 @@ import "../components/GlobalStyles.astro";
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Rafael Psicologo</title>
+
+    <title>Rafael Psicólogo</title>
+
+    <meta
+      name="description"
+      content="Profissional Rafael Pinho, Psicólogo Humanista em Mogi Das Cruzes - São Paulo"
+    />
+
+    <link rel="canonical" href="https://psicologorafaelpinho.com.br" />
+
+    <meta
+      property="og:title"
+      content="Profissional Rafael Pinho, Psicólogo Humanista em Mogi Das Cruzes - São Paulo"
+    />
+    <meta
+      property="og:description"
+      content="Profissional Rafael Pinho, Psicólogo Humanista em Mogi Das Cruzes - São Paulo"
+    />
+    <meta property="og:url" content="https://psicologorafaelpinho.com.br" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/fileTransp.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Psicólogo Rafael Pinho",
+        "description": "Profissional Rafael Pinho, Psicólogo Humanista em Mogi Das Cruzes - São Paulo",
+        "url": "https://psicologorafaelpinho.com.br",
+        "telephone": "(11) 96566-5977"
+      }
+    </script>
   </head>
   <body>
     <div class="nav-empty-space"></div>
@@ -44,7 +76,7 @@ import "../components/GlobalStyles.astro";
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
-    white-space: 'pre-line';
+    white-space: "pre-line";
   }
   * {
     -moz-box-sizing: border-box;
