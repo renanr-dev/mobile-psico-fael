@@ -36,7 +36,7 @@ function TextImagePage({
   const renderTextWithBreaks = (str: string) => {
     return str.split("\n").map((line, idx) => (
       <React.Fragment key={idx}>
-        {line}
+        {" " + line}
         {idx < str.split("\n").length - 1 && (
           <>
             <br />
@@ -66,7 +66,6 @@ function TextImagePage({
             <>
               {!isExpanded && <span>... </span>}
               <span className={`${!isExpanded && "hidden"}`}>
-                <br />
                 {renderTextWithBreaks(endText)}
               </span>
               <span

@@ -58,6 +58,13 @@ function PhotoCarousel() {
         <SwiperSlide>
           <img
             className="image-carousel"
+            src={eu_content_10.src}
+            alt={"eu-content"}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="image-carousel"
             src={eu_content_4.src}
             alt={"eu-content"}
           />
@@ -69,42 +76,36 @@ function PhotoCarousel() {
             alt={"eu-content"}
           />
         </SwiperSlide>
-         <SwiperSlide>
-          <img
-            className="image-carousel"
-            src={eu_content_6.src}
-            alt={"eu-content"}
-          />
-        </SwiperSlide>
-         <SwiperSlide>
-          <img
-            className="image-carousel"
-            src={eu_content_7.src}
-            alt={"eu-content"}
-          />
-        </SwiperSlide>
-         <SwiperSlide>
-          <img
-            className="image-carousel"
-            src={eu_content_8.src}
-            alt={"eu-content"}
-          />
-        </SwiperSlide>
-         <SwiperSlide>
+        <SwiperSlide>
           <img
             className="image-carousel"
             src={eu_content_9.src}
             alt={"eu-content"}
           />
         </SwiperSlide>
-         <SwiperSlide>
+        <SwiperSlide>
           <img
             className="image-carousel"
-            src={eu_content_10.src}
+            src={eu_content_6.src}
             alt={"eu-content"}
           />
         </SwiperSlide>
-         <SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="image-carousel"
+            src={eu_content_7.src}
+            alt={"eu-content"}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="image-carousel"
+            src={eu_content_8.src}
+            alt={"eu-content"}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
           <img
             className="image-carousel"
             src={eu_content_11.src}

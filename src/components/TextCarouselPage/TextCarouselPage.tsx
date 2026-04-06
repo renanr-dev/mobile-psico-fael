@@ -33,7 +33,7 @@ function TextCarouselPage({
   const renderTextWithBreaks = (str: string) => {
     return str.split("\n").map((line, idx) => (
       <React.Fragment key={idx}>
-        {line}
+        {" " + line}
         {idx < str.split("\n").length - 1 && (
           <>
             <br /> <br />
@@ -63,7 +63,6 @@ function TextCarouselPage({
             <>
               {!isExpanded && <span>... </span>}
               <span className={`${!isExpanded && "hidden"}`}>
-                <br />
                 {renderTextWithBreaks(endText)}
               </span>
               <span
