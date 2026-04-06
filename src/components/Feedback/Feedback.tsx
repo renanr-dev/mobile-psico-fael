@@ -22,6 +22,7 @@ function Feedback() {
     "Percebo que melhorei muito desde que iniciei esse processo, não apenas nos meus sentimentos do dia a dia, mas também na forma como enxergo a mim mesma. Cada encontro me ajuda a me conhecer melhor, a entender minhas emoções e a encontrar caminhos mais saudáveis para lidar com os desafios",
     "Atualmente estamos mapeando as coisas que se passaram na minha vida… sinto que tenho mais clareza sobre as coisas... e que estamos evoluindo...",
     "Adoro a dinâmica das sessões o quanto o Rafa tá aberto a ouvir de forma muito respeitosa e humana. É nítido seu preparo enquanto psicólogo e seu interesse pela vivência do cliente",
+    "Poder falar com meu psicólogo Rafael, tem me ajudado com a ansiedade, expectativas, experiência e observar e entender a minha vida através de olhar e de outro ponto de vista.",
   ];
 
   const listaEmPares: string[][] = [];
