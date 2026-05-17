@@ -23,6 +23,8 @@ function Feedback() {
     "Atualmente estamos mapeando as coisas que se passaram na minha vida… sinto que tenho mais clareza sobre as coisas... e que estamos evoluindo...",
     "Adoro a dinâmica das sessões o quanto o Rafa tá aberto a ouvir de forma muito respeitosa e humana. É nítido seu preparo enquanto psicólogo e seu interesse pela vivência do cliente",
     "Poder falar com meu psicólogo Rafael, tem me ajudado com a ansiedade, expectativas, experiência e observar e entender a minha vida através de olhar e de outro ponto de vista.",
+    "Até o momento tem sido uma experiência libertadora em vários sentidos sobre: estigmas, carga emocional e amarras sociais. Metodologias empáticas onde, no meu caso, se utilizou da música como instrumento para interpretação dos problemas e ressignificá-los com uma visão diferente.",
+    "Nossos encontros têm levantado muito material sobre mim, gerado boas inquietações, novos pontos de vista, coragem para me vulnerabilizar e confiança para seguir.",
   ];
 
   const listaEmPares: string[][] = [];
