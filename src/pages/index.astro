@@ -1,120 +1,152 @@
 ---
-import TextImagePage from "../components/TextImagePage/TextImagePage";
-import TextCarouselPage from "../components/TextCarouselPage/TextCarouselPage";
-import Layout from "../layouts/Layout.astro";
-import imgBook from "../images/book.jpg";
-import imgBookIcon from "../images/book-icon.jpg";
-import HomePage from "../components/HomePage/HomePage";
-import Alvo from "../components/Alvo.astro";
-import Rodape from "../components/Rodape.astro";
-import imgPsicoterapia from "../images/piscoterapia.jpeg";
-import imgBodyPsicoterapia from "../images/image-full.png";
-import imgOrientacao from "../images/orientacao.jpg";
-import imgBodyOrientacao from "../images/servico-chart.jpg";
-import imgAtendimento from "../images/aten-lgbt.jpg";
-import imgBodyAtendimento from "../images/servico-street.jpg";
-import imgTcc from "../images/tcc.png";
-import imgTccIcon from "../images/tcc-icon.jpg";
-import imgEu from "../images/eu.png";
-import imgBodyEu from "../images/eu-content.jpg";
-import Feedback from "../components/Feedback/Feedback";
-import EspacoPsico from "../components/EspacoPsico.astro";
-import TccImagePage from "../components/TccImagePage/TccImagePage";
-
-let textPsicoterapia =
-  "A psicoterapia é um processo íntimo no qual as suas demandas são tratadas através da escuta, da aceitação, da compreensão, do diálogo e da elaboração de estratégias para promoção de saúde, bem-estar e autorrealização, estando as minhas práticas amparadas na ciência da Psicologia. \nMeus atendimentos são orientados pela Abordagem Centrada na Pessoa (ACP), uma teoria que valoriza profundamente a individualidade da experiência de cada pessoa. Cada encontro possui duração média de 50min, ocorre por chamada de vídeo e consiste em um espaço seguro e sigiloso para que você possa se expressar livremente. Sem engessamento e sem neutralidade, eu busco construir uma relação profunda e verdadeira com você, utilizando meus conhecimentos, vivências e técnicas para te ajudar a lidar com suas questões emocionais e psicológicas. \nA psicoterapia também depende da sua abertura ao processo para que tenha resultados e não é possível prever quantas sessões serão necessárias para o tratamento adequado de cada demanda, mas você é livre para interromper ou pausar seu processo psicoterapêutico quando quiser – em conformidade com as condições do contrato estabelecido.";
-
-let textOrientacao =
-  "Se você está em dúvida sobre qual curso fazer depois do Ensino Médio, se está indecisa/o entre permanecer no seu emprego e buscar algo novo ou se você é aposentada/o e não sabe qual caminho seguir... o processo de Análise da Escolha Profissional (AEP) pode ser uma forma de decidir. A AEP é comumente chamada de Orientação Profissional e consiste no processo no qual a pessoa reflete sobre sua vida profissional através de encontros psicoterapêuticos que possibilitam o acesso ao autoconhecimento para a realização de escolhas genuínas. \nO objetivo da AEP não é simplesmente dar uma resposta fechada ao final do processo, mas sim expandir o seu horizonte de possibilidades para que você possa, em sua liberdade, realizar a escolha que mais fizer sentido para você - ou até mesmo optar por não escolher. Ao longo de encontros de duração média de 50min que acontecem semanalmente por chamadas de vídeo, você mergulhará em si mesma/o através de atividades de autoconhecimento, reflexões e discussões guiadas por mim. Esses encontros têm o propósito de compreender os contextos históricos, sociais, culturais e econômicos que te atravessaram até o momento presente; desconstruir ideias e valores engessados e limitantes para que você possa vislumbrar novas possibilidades; e, enfim, permitir que você utilize de sua nova perspectiva para realizar novas escolhas. A AEP tem uma duração estimada de 8 a 10 sessões, podendo variar conforme o caso.";
-
-let textAtendimento =
-  'Historicamente, pessoas LGBTQIAPN+ sofreram e ainda sofrem muitas violências decorrentes do preconceito existente na sociedade devido aos estigmas da heteronormatividade e da cisnormatividade. A Psicologia, como uma ciência relativamente jovem, também foi afetada por tais estigmas e, como consequência disso, muitas grades curriculares ainda não abordam profundamente as questões específicas das pessoas LGBTQIAPN+ e até alguns anos atrás a terapia de reorientação sexual (mais conhecida como "cura gay") ainda era permitida.\nDesde a década de 90, a homossexualidade passou a não ser mais considerada uma doença conforme uma declaração oficial da Organização Mundial de Saúde (OMS). Em 1999, o Conselho Federal de Psicologia (CFP) proibiu que psicólogos oferecessem a terapia de reorientação sexual ou quaisquer serviços psicológicos voltados ao tratamento da homossexualidade. Ainda assim, em 2016, o projeto de lei n.º 4931 foi apresentado na tentativa de garantir a prática da "cura gay" por psicólogos. A parte mais triste é que um grupo considerável de profissionais da Psicologia apoiou esse PL. Felizmente, o projeto foi arquivado em 2020 devido a sua proposta ser inconstitucional e retrógrada. \nTudo isso mostra o quanto nossa categoria profissional ainda carece de conhecimento para o atendimento do público LGBTQIAPN+. E, dado o risco de ainda haver profissionais que reforçam os estigmas e a LGBTfobia em suas práticas, é muito importante que psicólogos busquem pelo aperfeiçoamento de seus atendimentos para oferecer um serviço de qualidade adaptado às necessidades específicas das pessoas queer e “levantem a bandeira” para mostrarem-se aliados a essa luta. É isso o que significa oferecer atendimentos afirmativos para o público LGBTQIAPN+. Eu sou gay, orgulhoso e militante na luta por saúde, direitos e qualidade da vida LGBTQIAPN+, buscando combater em minha atuação os estigmas e preconceitos atrelados a nossa comunidade.';
-
-let textTcc =
-  "Análise integrativa acerca dos afetos vivenciados pela pessoa preta LGBTQIAPN+ a partir de 7 artigos selecionados através de levantamento da produção científica que objetivou compreender de que modo se apresenta, na produção científica em Psicologia, as articulações sobre interseccionalidade e expressões de afeto da pessoa preta LGBTQIAPN+ com base na noção de cuidado. O estudo revelou que a afetividade da pessoa preta LGBTQIAPN+ é golpeada por atravessamentos que contrapõem sua autenticidade e escolhas não somente nas relações, mas na própria condição de ser-aí que, no exercício do cuidado acaba enfrentando estigmas que forçam sua existência à uma padronização mais aceitável socialmente, gerando sofrimento. Portanto, urge a necessidade da desconstrução de um mundo simbólico de valores limitantes para que todo Dasein, independentemente de sua etnia, sexualidade e identidade de gênero, efetive sua liberdade e afetos sendo-no-mundo-com-os-outros, explicitando o cuidado que legitima seu ser próprio.";
-
-let textEu =
-  'Prazer, pode me chamar de Rafa! Eu nasci em 98, em São José dos Campos, cidade onde vivi grande parte da minha vida, mas Mogi das Cruzes tem sido o palco da minha existência desde 2023. Sou graduado em Psicologia pela Universidade de Mogi das Cruzes (UMC) e pós-graduado em Práticas Clínicas Fenomenológico-Existenciais pela FAPSI. Ao lado de uma grande amiga, desenvolvi uma importante pesquisa sobre a intersecção entre a negritude e a sexualidade na qual buscamos compreender a subjetividade das expressões de afeto da pessoa preta LGBTQIAPN+ com base na noção fenomenológica-existencial de cuidado. \nHoje, sou psicólogo clínico humanista-fenomenológico e pratico minha profissão com muita paixão, ética, responsabilidade e cuidado, oferecendo atendimentos afirmativos para o público LGBTQIAPN+. Estudo com frequência e já fui convidado para dar aulas de Psicologia em universidades como a UMC e a UniPiaget e minha atual ênfase está no estudo do amor, do afeto e das relações. Autores como Carl Rogers, Bell Hooks e Medard Boss compõem a minha base teórica e me ajudam a estruturar o meu manejo clínico. \nNo âmbito mais pessoal, eu sou cinéfilo, amante de filmes de terror, apaixonado por músicas de todos os gêneros, desenhista por diversão, apreciador de café, cerveja e docinhos, explorador de universos particulares e, não menos importante, o escritor do livro "Coisas que acontecem no banheiro".';
-
-let textBook =
-  'O livro "Coisas que acontecem no banheiro" é uma ideia que venho carregando comigo há anos, como a silhueta indefinida de um objeto colocado gentilmente em um canto silencioso de mim. Eu nunca me sentei, respirei fundo e tomei a decisão de escrevê-lo. Assim como as coisas que acontecem no banheiro, esse livro só aconteceu. Ele é composto por textos que escrevi para me compreender e tornar palpáveis as coisas que eu sentia. Tirar minha mente de dentro de mim e olhar para ela. \nO resultado disso é uma coletânea de textos reflexivos, poesias, críticas ao mundo que nos cerca e devaneios sobre amor, paixão, relacionamentos, psiquismo, sociedade, perdão, existência, liberdade e sentido da vida. \nDesejo que através da minha experiência e do meu olhar sobre a realidade, você encontre conforto, significado e uma boa companhia. Que esse livro seja um espaço de acolhimento e afeto para suas emoções repousarem seguras junto às minhas.';
+import "../components/GlobalStyles.astro";
+import maintenanceImage from "../images/maintanance.png";
 ---
 
-<Layout>
-  <div class="marginF">
-    <HomePage client:load />
-    <TextImagePage
-      title="CONHEÇA MEU PRIMEIRO LIVRO!"
-      text={textBook}
-      imgHeaderSrc={imgBookIcon.src}
-      imgBodySrc={imgBook.src}
-      bgColor="#8CB9E1"
-      pageId="book"
-      buttonLink="https://rafaelpinho.herospark.co/coisas-que-acontecem-no-banheiro-livro-digital"
-      buttonTitle="Clique aqui e adquira a sua cópia digital! 🚽"
-      client:load
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <Alvo />
-    <Feedback client:load />
-    <TextImagePage
-      title="PSICOTERAPIA"
-      text={textPsicoterapia}
-      imgHeaderSrc={imgPsicoterapia.src}
-      imgBodySrc={imgBodyPsicoterapia.src}
-      bgColor="#8CB9E1"
-      pageId="psicoterapia"
-      buttonLink="https://wa.me/5511965665977"
-      buttonTitle="Tire suas dúvidas ou agende o seu contato inicial gratuito!"
-      client:load
-    />
-    <EspacoPsico />
-    <TextImagePage
-      title="ORIENTAÇÃO PROFISSIONAL"
-      text={textOrientacao}
-      imgHeaderSrc={imgOrientacao.src}
-      imgBodySrc={imgBodyOrientacao.src}
-      bgColor="#FFFFFF"
-      pageId="orientacao"
-      buttonLink="https://wa.me/5511965665977"
-      buttonTitle="Tire suas dúvidas ou agende o seu contato inicial gratuito!"
-      client:load
-    />
-    <TextImagePage
-      title="ATENDIMENTO LGBTQIAPN+"
-      text={textAtendimento}
-      imgHeaderSrc={imgAtendimento.src}
-      imgBodySrc={imgBodyAtendimento.src}
-      bgColor="#8CB9E1"
-      pageId="atendimento"
-      buttonLink="https://wa.me/5511965665977"
-      buttonTitle="Tire suas dúvidas ou agende o seu contato inicial gratuito!"
-      client:load
-    />
+    <title>Rafael Psicólogo</title>
+  </head>
+  <body>
+    <main class="maintenance">
+      <section class="maintenance__content" aria-label="Mensagem de manutenção">
+        <img
+          class="maintenance__image"
+          src={maintenanceImage.src}
+          alt="Imagem de manutenção"
+        />
+        <p>
+          Olá! Que bom te ver aqui. No momento, este site está passando por um processo de melhoria.
+          Se está procurando o Rafael, busque @psi.rafaelpinho no Instagram, ou clique no botão abaixo.
+          Até breve!
+        </p>
+        <a href="https://www.instagram.com/psi.rafaelpinho/" target="_blank" rel="noreferrer">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          Ir para o Instagram
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
 
-    <TccImagePage
-      title="CONHEÇA O MEU TCC"
-      text={textTcc}
-      imgHeaderSrc={imgTccIcon.src}
-      imgBodySrc={imgTcc.src}
-      bgColor="#FFFFFF"
-      pageId="tcc"
-      client:load
-    />
-
-    <TextCarouselPage
-      title="QUEM SOU EU?"
-      text={textEu}
-      imgHeaderSrc={imgEu.src}
-      imgBodySrc={imgBodyEu.src}
-      bgColor="#8CB9E1"
-      pageId="sobre-mim"
-      client:load
-    />
-    <Rodape />
-  </div>
-</Layout>
 <style>
-  .margin {
-    padding: 0 1rem;
+  :global(html),
+  :global(body) {
+    margin: 0;
+    min-height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: #ffffff;
+    color: #292828;
+    font-family: "calibri-regular", sans-serif;
+  }
+
+  :global(body) {
+    min-height: 100dvh;
+  }
+
+  @font-face {
+    font-family: "calibri-regular";
+    src: url("/fonts/calibri-regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .maintenance {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(24px, 6vw, 32px);
+    box-sizing: border-box;
+    background: #4cc782;
+  }
+
+  .maintenance__content {
+    width: min(100%, 420px);
+    min-height: min(80dvh, 620px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(14px, 4vw, 24px);
+  }
+
+  .maintenance__image {
+    width: min(100%, 330px);
+    max-width: 240px;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .maintenance__content p {
+    margin: 0;
+    font-size: clamp(1.35rem, 5.2vw, 1.75rem);
+    line-height: 1.55;
+    color: #ffffff;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .maintenance__content a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #a17ece;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  }
+
+  .maintenance__content a:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+  }
+
+  .maintenance__content a i {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 480px) {
+    .maintenance {
+      padding: 36px;
+    }
+
+    .maintenance__content {
+      width: 100%;
+      min-height: auto;
+      gap: 24px;
+    }
+
+    .maintenance__image {
+      max-width: 330px;
+    }
+
+    .maintenance__content p {
+      font-size: 1.28rem;
+      line-height: 1.6;
+    }
+
+    .maintenance__content a {
+      max-width: 100%;
+      padding: 12px 16px;
+    }
   }
 </style>
