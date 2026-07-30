@@ -12,6 +12,22 @@ import maintenanceImage from "../images/maintanance.png";
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Rafael Psicólogo</title>
+    <script is:inline>
+      (function () {
+        const userAgent = navigator.userAgent || "";
+        const isPhoneUserAgent = /Android|iPhone|iPod|Windows Phone|Mobile|Opera Mini/i.test(userAgent);
+        const isTouchDevice = window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window || navigator.maxTouchPoints > 0;
+        const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+        const isPhone = isPhoneUserAgent && isTouchDevice && isSmallScreen;
+        const shouldRedirect = !isPhone;
+        const mainSiteUrl = "https://psicologorafaelpinho.com.br/";
+        const isAlreadyMainSite = window.location.origin === new URL(mainSiteUrl).origin;
+
+        if (shouldRedirect && !isAlreadyMainSite) {
+          window.location.replace(mainSiteUrl);
+        }
+      })();
+    </script>
   </head>
   <body>
     <main class="maintenance">
