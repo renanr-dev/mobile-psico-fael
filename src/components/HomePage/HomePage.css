@@ -6,6 +6,10 @@
   margin-bottom: 20px;
 }
 
+.home-text{
+  color: rgba(00, 00, 00, 0.7);
+}
+
 .home-text-header {
   height: 80px;
   flex-direction: row;
@@ -14,11 +18,11 @@
   text-align: center;
   justify-content: center;
   gap: 10px;
-  color: #062440;
+  color: #D73996;
   font-family: "Beatles", sans-serif;
 }
 .home-text-title {
-  border-bottom: #062440 1px solid;
+  border-bottom: #D73996 1px solid;
 }
 .text-header-image {
   width: 80px;

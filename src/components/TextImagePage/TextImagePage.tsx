@@ -11,6 +11,9 @@ interface TextImagePageProp {
   pageId: string;
   buttonTitle: string;
   buttonLink: string;
+  headerColor: string;
+  letterColor?: string;
+  hasShadow?: boolean;
 }
 
 function TextImagePage({
@@ -22,6 +25,9 @@ function TextImagePage({
   pageId,
   buttonTitle,
   buttonLink,
+  letterColor = "#000000B3",
+  headerColor,
+  hasShadow = false,
 }: TextImagePageProp) {
   const [isExpanded, setIsExpanded] = useState(false);
   let amountOfWords = 70;
@@ -52,13 +58,19 @@ function TextImagePage({
   };
 
   return (
-    <div className="container" id={pageId} style={{ backgroundColor: bgColor }}>
+    <div
+      className="container"
+      id={pageId}
+      style={{ backgroundColor: bgColor, color: letterColor }}
+    >
       <div className="text-container">
         <div className="text-header global-padding global-header">
           <div className="text-header-image">
             <img src={imgHeaderSrc} alt="" className="image-header" />
           </div>
-          <div className="text-title">{title}</div>
+          <div className="text-title" style={{ color: headerColor }}>
+            {title}
+          </div>
         </div>
         <div className="text-section text global-padding">
           {renderTextWithBreaks(beginText)}
@@ -79,10 +91,14 @@ function TextImagePage({
         </div>
       </div>
       <div className="image-container">
-        <img src={imgBodySrc} alt="" className="image-body" />
+        <img
+          src={imgBodySrc}
+          alt=""
+          className={`image-body ${hasShadow ? "img-drop-shadow" : ""}`}
+        />
       </div>
       <div className="center-contact">
-        <button className="call-contato " onClick={handleShareClick}>
+        <button className="call-contato" onClick={handleShareClick}>
           {buttonTitle}
         </button>
       </div>

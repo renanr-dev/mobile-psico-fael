@@ -4,8 +4,7 @@
   display: flex;
   flex-direction: column;
   padding: 15px 0;
-  scroll-margin-top: 70px; 
-
+  scroll-margin-top: 70px;
 }
 
 .text-container {
@@ -22,12 +21,7 @@
   width: 80px;
   height: 100%;
 }
-.text-title {
-  font-family: "calibri-regular";
-  font-size: 18pt;
-  font-weight: bold;
-  text-align: left;
-}
+
 .text-section {
   font-size: 14pt;
   letter-spacing: 1.5px;
@@ -45,23 +39,14 @@
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
+  margin-bottom: 5px;
+}
+.img-drop-shadow {
+  box-shadow: -12px 12px 0 0 #3274dc;
+  border-radius: 12px;
 }
 .hidden {
   display: none;
-}
-
-.call-contato {
-  padding: 10px 10px;
-  color: #062440;
-  background-color: #ffe255;
-  border: 1px solid #062440;
-  filter: drop-shadow(5px 5px 0 #062440);
-  border-radius: 10px;
-  cursor: pointer;
-  text-indent: 0;
-  font-weight: bold;
-  font-style: italic;
-  width: 100%;
 }
 
 .center-contact {

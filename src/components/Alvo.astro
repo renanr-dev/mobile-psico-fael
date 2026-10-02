@@ -1,5 +1,5 @@
 ---
-import alvo from "../images/p-alvo.jpeg";
+import alvo from "../images/p-alvo.png";
 import alvoIcon from "../images/alvo-icone.png";
 import "./GlobalStyles.astro";
 ---
@@ -42,10 +42,12 @@ import "./GlobalStyles.astro";
 <style>
   #container-alvo {
     height: fit-content;
-    background-color: #ffe255;
+    background-color: #d73996;
     display: flex;
     padding: 1.5rem;
+    color: #ffffff;
   }
+
   .container-image {
     display: flex;
     flex-direction: row;
@@ -81,12 +83,13 @@ import "./GlobalStyles.astro";
     min-width: 250px;
     text-align: left;
     margin-top: 20px;
+    font-family: "roboto";
   }
   .bubble {
     border-radius: 10px;
     background-color: white;
-    border: 2px solid #062440;
-    filter: drop-shadow(5px 5px 0px #062440);
+    border: 2px solid #3274dc;
+    filter: drop-shadow(5px 5px 0px #3274dc);
   }
   .icons {
     display: flex;
@@ -102,14 +105,14 @@ import "./GlobalStyles.astro";
     cursor: pointer;
     gap: 5px;
     text-decoration: none;
-    color: #062440;
+    color: #3274DC;
   }
   .icons > a > i {
     font-size: 20px;
     align-items: center;
     justify-self: center;
     display: flex;
-    color: black;
+    color: #ffffff;
     border-radius: 100%;
   }
   .icons > a > span {
@@ -128,13 +131,12 @@ import "./GlobalStyles.astro";
     gap: 10px;
   }
   .alvo-text-title {
-    font-family: "calibri-regular";
+    font-family: "Bebas Neue";
     font-size: 18pt;
-    font-weight: bold;
   }
 
   .bubble:hover {
     transform: translate(2px, 2px);
-    filter: drop-shadow(3px 3px 0 #062440);
+    filter: drop-shadow(3px 3px 0 #3274DC);
   }
 </style>

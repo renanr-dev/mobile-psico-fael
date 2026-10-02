@@ -1,18 +1,26 @@
 .container-photo-carousel {
   display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 12px 12px 0 0 #3274dc;
 }
 
-.photo-carousel {
-  border-radius: 20px;
+.photo-carousel,
+.photo-carousel .swiper-wrapper,
+.swiper-slide {
+  border-radius: 12px;
 }
 
 .image-carousel {
+  display: block;
   width: 100%;
-
+  height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 12px;
 }
+
 .swiper-slide {
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }

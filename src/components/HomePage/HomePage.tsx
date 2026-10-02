@@ -5,7 +5,7 @@ import "../GlobalStyles.astro";
 
 function HomePage() {
   let text =
-    "Se você está aqui, isso provavelmente significa que você ou alguém com quem você se importa precisa de apoio psicológico, estou certo? Para quebrar o gelo, está tudo bem se você sente que precisa de ajuda. Ser atendida/o por um psicólogo não é “coisa de louco” não! É coisa de ser humano. Então, se você está passando por um momento difícil, buscando ser melhor em suas relações, lidando com a ansiedade, a tristeza ou o estresse em excesso e até se você simplesmente está em busca de autoconhecimento... você pode se beneficiar com o apoio de um psicoterapeuta. \nEu me chamo Rafael, sou psicólogo humanista-fenomenológico e acredito em uma Psicologia direcionada para aquilo de mais original e particular de cada um. Luto através dos meus estudos, posicionamentos e do meu trabalho por uma ciência da mente que não perca de vista os aspectos mais singulares e valiosos do ser humano. Que antes de sermos diagnósticos, pacientes, adoecidos, sejamos pessoas com histórias, desejos, medos, emoções, sentimentos, vulnerabilidades e potência.";
+    "Está buscando por apoio psicológico, mas ainda não sabe qual caminho seguir? Aqui, eu te explico como funciona o processo psicoterapêutico comigo. Meus atendimentos são orientados pela Abordagem Centrada na Pessoa (ACP), uma teoria que valoriza profundamente a individualidade da sua experiência e história de vida. Durante os nossos encontros, as suas demandas serão tratadas através da escuta ativa, da compreensão, da empatia e do diálogo. Através da lente humanista-fenomenológica, eu ofereço serviços de Psicologia que estendem-se para além da clínica, como Orientação Profissional, intervenções grupais e palestras. Meu propósito é ajudar pessoas a se conhecerem e acessarem seus recursos internos para ampliarem suas possibilidades de ser, vivendo com mais saúde, bem-estar e autonomia emocional e existencial. Fez sentido para você? Então, fique à vontade e explore mais detalhes do meu trabalho :) ";
   const [isExpanded, setIsExpanded] = useState(false);
   let amountOfWords = 60;
   const splittedText = text.split(" ");
@@ -39,7 +39,7 @@ function HomePage() {
         <div className="home-text-header">
           <h2 className="home-text-title">OLÁ, SEJA MUITO BEM VINDA/O!</h2>
         </div>
-        <div className=" text global-padding">
+        <div className="text global-padding home-text">
           {isExpanded ? (
             renderTextWithBreaks(beginText + " " + endText)
           ) : (

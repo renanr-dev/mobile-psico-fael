@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./NavBar.css";
-import logo from "../../images/logo1.png";
+import logo from "../../images/header-logo.png";
 
 export default function NavBar() {
   const [sideOpen, setSideOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function NavBar() {
 
   return (
     <div className="navbar">
-      <img src={logo.src} alt="" />
+      <img src={logo.src} className="logo" alt="" />
       <span
         className="menu"
         onClick={() => {

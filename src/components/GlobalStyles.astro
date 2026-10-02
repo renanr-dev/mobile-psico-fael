@@ -4,6 +4,8 @@ const backgroundColor = "rgb(24 121 78)";
 ---
 
 <style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Calibri:wght@400;700&display=swap");
+
   @font-face {
     font-family: "Voga";
     src: url("/fonts/voga.ttf") format("woff");
@@ -18,6 +20,7 @@ const backgroundColor = "rgb(24 121 78)";
     font-style: normal;
     font-display: swap;
   }
+
   .text {
     line-height: 1.5;
     font-size: 14pt;
@@ -26,14 +29,21 @@ const backgroundColor = "rgb(24 121 78)";
     text-wrap: wrap;
     text-align: left;
     word-spacing: 2px;
-    white-space: 'pre-line';
+    white-space: "pre-line";
+  }
+  .text-title {
+    font-family: "Bebas Neue";
+    font-size: 18pt;
+    text-align: left;
+    font-weight: normal;
   }
 
   .voga-font-header-1 {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Bebas Neue", Georgia, "Times New Roman", Times, serif;
   }
   .voga-font-header-2 {
-    font-family: Georgia, "Times New Roman", Times, serif !important;
+    font-family:
+      "Bebas Neue", Georgia, "Times New Roman", Times, serif !important;
     font-size: 20pt;
   }
   .global-padding {
@@ -41,8 +51,20 @@ const backgroundColor = "rgb(24 121 78)";
     padding-left: 1.5rem !important;
   }
   .global-header {
-    color: black;
     font-family: "calibri-regular";
     padding-bottom: 10px;
+  }
+  .call-contato {
+    padding: 10px 10px;
+    color: #3274dc;
+    background-color: #ffffff;
+    border: 1px solid #3274dc;
+    filter: drop-shadow(5px 5px 0 #3274dc);
+    border-radius: 10px;
+    cursor: pointer;
+    text-indent: 0;
+    font-weight: bold;
+    font-style: italic;
+    width: 100%;
   }
 </style>
