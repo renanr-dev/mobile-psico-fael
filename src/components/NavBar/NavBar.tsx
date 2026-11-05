@@ -27,6 +27,12 @@ export default function NavBar() {
       <div className={`side-panel-container ${sideOpen ? "visible" : ""}`}>
         <ul className="list-menu">
           <a
+            onClick={(e) => scrollToSection(e, "atendimento")}
+            href="#atendimento"
+          >
+            ATENDIMENTOS LGBTQIAPN+
+          </a>
+          <a
             onClick={(e) => scrollToSection(e, "psicoterapia")}
             href="#psicoterapia"
           >
@@ -38,17 +44,13 @@ export default function NavBar() {
           >
             ORIENTAÇÃO PROFISSIONAL
           </a>
-          <a
-            onClick={(e) => scrollToSection(e, "atendimento")}
-            href="#atendimento"
-          >
-            ATENDIMENTOS LGBTQIAPN+
+
+
+          <a onClick={(e) => scrollToSection(e, "book")} href="#book">
+            CONHEÇA MEU LIVRO!
           </a>
           <a onClick={(e) => scrollToSection(e, "sobre-mim")} href="#sobre-mim">
             SOBRE MIM
-          </a>
-          <a onClick={(e) => scrollToSection(e, "book")} href="#book">
-            CONHEÇA MEU LIVRO!
           </a>
         </ul>
       </div>
