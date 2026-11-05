@@ -6,14 +6,22 @@ const backgroundColor = "rgb(24 121 78)";
 <style is:global>
   @font-face {
     font-family: "Voga";
-    src: url("/fonts/voga.ttf") format("woff");
+    src: url("/fonts/voga.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Bebas Neue";
+    src: url("https://fonts.gstatic.com/s/bebasneue/v16/JTUSjIg69CK48gW7PXooxW4.ttf")
+      format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: "calibri-regular";
-    src: url("/fonts/calibri-regular.ttf") format("woff");
+    src: url("/fonts/calibri-regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -37,11 +45,10 @@ const backgroundColor = "rgb(24 121 78)";
   }
 
   .voga-font-header-1 {
-    font-family: "Bebas Neue";
+   font-family: "Bebas Neue";
   }
   .voga-font-header-2 {
-    font-family:
-      "Bebas Neue" !important;
+    font-family: "Bebas Neue";
     font-size: 20pt;
   }
   .global-padding {
