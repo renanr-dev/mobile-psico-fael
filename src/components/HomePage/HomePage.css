@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+
 .home-container {
   box-sizing: border-box;
   gap: 10px;
@@ -23,6 +25,7 @@
 }
 .home-text-title {
   border-bottom: #D73996 1px solid;
+  font-family: "Suez One", sans-serif;
 }
 .text-header-image {
   width: 80px;
